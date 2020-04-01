@@ -12,10 +12,10 @@ This file draws a contour of desired colour depending on the area of the contour
 ## 3. color detection 5 colours.py
 This  code detects different colors on a rubix cube in real time :
 
-##4.object count
+## 4.object count
 Count and update the value of number of blue objects in the frame
 
-##5.final.py
+## 5.final.py
 
 This code will be run finally to get the desired results
 ## few screenshots
