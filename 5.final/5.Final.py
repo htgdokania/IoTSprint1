@@ -6,7 +6,7 @@ cap=cv2.VideoCapture(0)
 #initialization
 c_blue=c_red=c_green=c_orange=c_yellow=0
 
-area_low=7000
+area_low=1000
 area_high=20000
 
 while True:
@@ -15,8 +15,8 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     #blue
-    low_blue=np.array([90,122,211])
-    high_blue=np.array([128,255,255])
+    low_blue=np.array([85,121,86])
+    high_blue=np.array([119,255,255])
     mask1=cv2.inRange(hsv,low_blue,high_blue)
     blur1=cv2.GaussianBlur(mask1,(15,15),0)
     contours1,_=cv2.findContours(blur1,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
@@ -36,7 +36,7 @@ while True:
     
 
     #Red
-    low_red=np.array([123,88,209])
+    low_red=np.array([131,92,83])
     high_red=np.array([179,255,255])
     mask2=cv2.inRange(hsv,low_red,high_red)
     blur2=cv2.GaussianBlur(mask2,(15,15),0)
@@ -59,8 +59,8 @@ while True:
    
     #Green
         
-    low_green=np.array([45,100,151])
-    high_green=np.array([62,255,255])
+    low_green=np.array([61,89,121])
+    high_green=np.array([87,255,255])
     mask3=cv2.inRange(hsv,low_green,high_green)
     blur3=cv2.GaussianBlur(mask3,(15,15),0)
     contours3,_=cv2.findContours(blur3,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
@@ -81,8 +81,8 @@ while True:
    
     #orange
     
-    low_or=np.array([12,104,171])
-    high_or=np.array([26,255,255])
+    low_or=np.array([0,89,99])
+    high_or=np.array([11,188,201])
     mask4=cv2.inRange(hsv,low_or,high_or)
     blur4=cv2.GaussianBlur(mask4,(15,15),0)
     contours4,_=cv2.findContours(blur4,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
@@ -102,8 +102,8 @@ while True:
    
     #yellow
     
-    low_ye=np.array([25,62,186])
-    high_ye=np.array([44,255,255])
+    low_ye=np.array([30,61,103])
+    high_ye=np.array([61,255,255])
     mask5=cv2.inRange(hsv,low_ye,high_ye)
     blur5=cv2.GaussianBlur(mask5,(15,15),0)
     contours5,_=cv2.findContours(blur5,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
